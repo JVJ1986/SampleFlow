@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext, useContext } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 import { supabase } from './lib/supabase';
 import { USER_ROLES } from './lib/constants';
 import Login from './pages/Login';
