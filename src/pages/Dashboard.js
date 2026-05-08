@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../App';
-import { STAGES, STAGE_COLOR, STAGE_NEXT } from '../lib/constants';
+import { STAGES, STAGE_COLOR } from '../lib/constants';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 
 export default function Dashboard() {
-  const { samples, activityLog, userRole, setPage, showToast } = useContext(AppContext);
+  const { samples, activityLog, userRole, setPage } = useContext(AppContext);
 
   const counts = {};
   STAGES.forEach(s => { counts[s] = samples.filter(x=>x.stage===s).length; });
@@ -29,7 +29,7 @@ export default function Dashboard() {
     actCard: { background:'#111', borderRadius:12, padding:22, display:'flex', flexDirection:'column' },
     acBtn:   (variant) => ({
       width:'100%', padding:'13px 16px', borderRadius:9, fontSize:13, fontWeight:500,
-      cursor:'pointer', display:'flex', alignItems:'center', gap:8, border:'none',
+      cursor:'pointer', display:'flex', alignItems:'center', gap:8,
       marginBottom:10, background: variant==='white'?'#fff':'#1f1f1f',
       color: variant==='white'?'#111':'#fff',
       border: variant==='dark'?'1px solid #333':'none',

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { AppContext } from '../App';
-import { STAGES, STAGE_NEXT, BADGE_STYLE } from '../lib/constants';
+import { STAGE_NEXT, BADGE_STYLE } from '../lib/constants';
 import { supabase } from '../lib/supabase';
 import SampleModal from '../components/SampleModal';
 
