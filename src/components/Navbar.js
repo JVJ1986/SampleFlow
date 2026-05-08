@@ -1,3 +1,8 @@
+bash
+
+cat /home/claude/sampleflow/src/components/Navbar.js
+Output
+
 import React, { useContext } from 'react';
 import { AppContext } from '../App';
 import { supabase } from '../lib/supabase';
