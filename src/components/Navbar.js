@@ -3,7 +3,7 @@ import { AppContext } from '../App';
 import { supabase } from '../lib/supabase';
 
 export default function Navbar() {
-  const { session, page, setPage, activeTab, setActiveTab } = useContext(AppContext);
+  const { session, page, setPage } = useContext(AppContext);
   const email = session?.user?.email || '';
   const name  = email.split('@')[0].replace(/\./g,' ').replace(/\b\w/g, c=>c.toUpperCase());
 
